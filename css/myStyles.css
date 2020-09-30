@@ -1,0 +1,51 @@
+/* ANIMATIONS */
+@keyframes bodyBackgroundColor {
+    0% {background-image: linear-gradient( black, rgb(0, 0, 29));}
+    50% {background-image: linear-gradient( black, rgb(0, 0, 75));}
+    100% {background-image: linear-gradient( black, rgb(0, 0, 29));}
+}
+
+/* ADDITIONAL FX */
+
+/* STANDARD CSS */
+
+body {
+    height: 100vh;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    /*background: linear-gradient(black, rgb(0, 0, 75));*/
+	/*animation: bodyBackgroundColor 10s ease infinite;*/
+}
+.radial-gradient {
+    z-index: -50;
+    position:fixed;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+
+    /*Fallback if gradeints don't work */
+    background: #000014;
+    /*Linear gradient... */
+    background: 
+    radial-gradient(at center, #04003f, #000000);
+}
+
+#mainNavbar {
+    background-color: black;
+    padding: 0 10% 0 10%;
+    height: 3rem;
+}
+
+#mainNavbar .mainNavbarItem {
+    margin: auto 1.5rem auto 1.5rem;
+}
+
+.mainNavbarItem a {
+    text-decoration: none;
+    color: rgb(150,150,150);
+}
+.mainNavbarItem a:hover {
+    color: white;
+}

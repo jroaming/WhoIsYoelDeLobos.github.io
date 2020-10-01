@@ -1,0 +1,18 @@
+/* ANIMATIONS */
+
+
+/* STANDARD CSS */
+.radial-gradient {
+    z-index: -50;
+    position:fixed;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+
+    /*Fallback if gradeints don't work */
+    background: #000014;
+    /*Linear gradient... */
+    background: 
+    radial-gradient(at center, #04003f, #000000);
+}

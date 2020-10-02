@@ -39,9 +39,12 @@ body {
     left: 65%;
     top: 16vh;
 }
+#img-joel-title-cover {
+    left: 10%;
+}
 
 #div-welcome-titles {
-    margin: 4rem 2rem 4rem 6rem;
+    margin: 2rem 2rem 2rem 6rem;
 }
 #div-welcome-titles h1, h2 {
     color: rgb(197, 197, 197);

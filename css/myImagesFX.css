@@ -4,13 +4,18 @@
     50% {transform: translatey(-6%);}
     100%  {transform: translatey(0%);}
 }
+@keyframes image-floating-softer-effect {
+    0%  {transform: translatey(0%);}
+    50% {transform: translatey(-4%);}
+    100%  {transform: translatey(0%);}
+}
 
 
 /* STANDARD CSS */
 #img-yoel-cover-face {
-    height: 60vh;
+    height: 40vh;
     position: fixed; /*if there's any trouble: swap to 'relative' */
-    animation: image-floating-effect 5s ease-in-out infinite;
+    animation: image-floating-effect 8s ease-in-out infinite;
     -webkit-filter: drop-shadow(0px 0px 20px rgba(0, 238, 255, 0.35));}
 
 #img-yoel-cover-face:hover {
@@ -21,12 +26,16 @@
 }
 
 #img-joel-title-cover {
-    height: 45vh;
+    height: 40vh;
     position: fixed; /*if there's any trouble: swap to 'relative' */
+    animation: image-floating-softer-effect 6s ease-in-out infinite;
 }
 #img-joel-title-cover:hover {
     content: url('../img/joel-title-blue-glow-maxsize.png');
     filter: hue-rotate(180deg); /*we leave this here in case shadow glow doesnt work*/
-    -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 132, 255, 0.2));
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 183, 255, 0.404));
+}
 
+.img-item-list-active {
+    height: 30px;
 }

@@ -47,22 +47,29 @@
     <div class="radial-gradient"></div>
     
     <!-- ***************************************************************************** NAVIGATION BAR-->
-    <div id="mainNavbar" class="d-flex flex-row justify-content-end">
-      <p class="p-2 mainNavbarItem">
-        <a class="" onclick="switchTo('main-cover');">Home</a>
-      </p>
-      <p class="p-2 mainNavbarItem">
-        <a class=""onclick="switchTo('profile-page');">Profile</a>
-      </p>
-      <p class="p-2 mainNavbarItem">
-        <a class="" onclick="switchTo('projects-page');">Projects</a>
-      </p>
-      <p class="p-2 mainNavbarItem">
-        <a class="" onclick="switchTo('tools-page');">Tools</a>
-      </p>
-      <p class="p-2 mainNavbarItem">
-        <a class="" onclick="switchTo('contact-page');">Contact</a>
-      </p>
+    <div id="mainNavbar" class="d-flex flex-row justify-content-around">
+      <div id="div-textAreaHelper" class="d-flex align-items-center">
+        <textarea rows="1" cols="80" class="textAreaHelper" disabled>I'll try to explain everything you point with the mouse!
+        </textarea>
+      </div>
+
+      <div class="d-flex flex-row justify-content-end">
+        <p class="p-2 mainNavbarItem">
+          <a class="" onclick="switchTo('main-cover');">Home</a>
+        </p>
+        <p class="p-2 mainNavbarItem">
+          <a class=""onclick="switchTo('profile-page');">Profile</a>
+        </p>
+        <p class="p-2 mainNavbarItem">
+          <a class="" onclick="switchTo('projects-page');">Projects</a>
+        </p>
+        <p class="p-2 mainNavbarItem">
+          <a class="" onclick="switchTo('tools-page');">Tools</a>
+        </p>
+        <p class="p-2 mainNavbarItem">
+          <a class="" onclick="switchTo('contact-page');">Contact</a>
+        </p>
+      </div>
     </div>
 
     <!-- ***************************************************************************** LOADING SCREEN -->

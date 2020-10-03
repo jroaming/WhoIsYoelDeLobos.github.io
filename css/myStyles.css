@@ -35,6 +35,17 @@ body {
     cursor: pointer;
 }
 
+.textAreaHelper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    resize: none;
+    overflow: hidden;
+    border: inset 2px rgb(58, 255, 229);
+    background-color: rgb(16, 16, 59);
+    color: white;
+}
+
 /* Main Cover Menu - - - - - - - - - - - - - - - - - - - - - - - - - */
 #img-yoel-cover-face {
     right: 65%;

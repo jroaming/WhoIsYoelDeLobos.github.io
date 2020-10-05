@@ -41,9 +41,11 @@ body {
 
     resize: none;
     overflow: hidden;
-    border: inset 2px rgb(58, 255, 229);
-    background-color: rgb(16, 16, 59);
+    border: inset 2px rgb(58, 183, 255);
+    background-color: rgba(0, 30, 94, 0.479);
     color: white;
+
+    text-shadow: 0 0 2px rgb(154, 218, 255), 0 0 2em rgb(64, 226, 255);
 }
 
 /* Main Cover Menu - - - - - - - - - - - - - - - - - - - - - - - - - */

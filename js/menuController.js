@@ -1,3 +1,4 @@
+//swap between different pages
 function switchTo(code) {
     //$('loading-screen').style.display == 'none';
     $('#main-cover')[0].style.display = 'none';

@@ -33,7 +33,7 @@
     </audio>
 
     <script src="js/menuController.js"></script>
-    <script src="js/mouseGlow.js"></script>
+    <script src="js/mouseGlow+Sound.js"></script>
 
 
     <title>Yoel de Lobos Portfolio</title>
@@ -49,25 +49,26 @@
     <!-- ***************************************************************************** NAVIGATION BAR-->
     <div id="mainNavbar" class="d-flex flex-row justify-content-around">
       <div id="div-textAreaHelper" class="d-flex align-items-center">
-        <textarea rows="1" cols="80" class="textAreaHelper" disabled>I'll try to explain everything you point with the mouse!
+        <img src="img/originals/joel-quiet.png" id="img-yoel-talking-face">
+        <textarea id="textAreaHelper" rows="1" cols="50" class="textAreaHelper" disabled>I will explain everything you hover the cursor over.
         </textarea>
       </div>
 
       <div class="d-flex flex-row justify-content-end">
         <p class="p-2 mainNavbarItem">
-          <a class="" onclick="switchTo('main-cover');">Home</a>
+          <a class="" onclick="switchTo('main-cover');" onmouseover="captionTextarea('main-menu_home');" onmouseleave="captionTextarea(0)">Home</a>
         </p>
         <p class="p-2 mainNavbarItem">
-          <a class=""onclick="switchTo('profile-page');">Profile</a>
+          <a class=""onclick="switchTo('profile-page');" onmouseover="captionTextarea('main-menu_profile');" onmouseleave="captionTextarea(0)">Profile</a>
         </p>
         <p class="p-2 mainNavbarItem">
-          <a class="" onclick="switchTo('projects-page');">Projects</a>
+          <a class="" onclick="switchTo('projects-page');" onmouseover="captionTextarea('main-menu_projects');" onmouseleave="captionTextarea(0)">Projects</a>
         </p>
         <p class="p-2 mainNavbarItem">
-          <a class="" onclick="switchTo('tools-page');">Tools</a>
+          <a class="" onclick="switchTo('tools-page');" onmouseover="captionTextarea('main-menu_tools');" onmouseleave="captionTextarea(0)">Tools</a>
         </p>
         <p class="p-2 mainNavbarItem">
-          <a class="" onclick="switchTo('contact-page');">Contact</a>
+          <a class="" onclick="switchTo('contact-page');" onmouseover="captionTextarea('main-menu_contact');" onmouseleave="captionTextarea(0)">Contact</a>
         </p>
       </div>
     </div>
@@ -80,8 +81,8 @@
     <!-- ***************************************************************************** MAIN MENU -->
     <div id="main-cover">
       
-      <img src="img/yoel-blued-cover-face.png" id="img-yoel-cover-face"/>
-      <img src="img/joel-title-white-glow-maxsize.png" id="img-joel-title-cover"/>
+      <img src="img/yoel-blued-cover-face.png" id="img-yoel-cover-face" onmouseover="captionTextarea('home-face-img');" onmouseleave="captionTextarea(0)"/>
+      <img src="img/joel-title-white-glow-maxsize.png" id="img-joel-title-cover" onmouseover="captionTextarea('home-name-img');" onmouseleave="captionTextarea(0)"/>
 
       <div id="div-welcome-titles">
         <h2>Welcome to my workplace!</h2>
@@ -98,25 +99,25 @@
 
         <div id="div-main-menu" class="d-flex flex-column align-items-center">
 
-          <div id="div-main-menu-item1" class="div-main-menu-item d-flex flex-row align-items-center">
+          <div id="div-main-menu-item1" class="div-main-menu-item d-flex flex-row align-items-center" onmouseover="captionTextarea('main-menu_profile');" onmouseleave="captionTextarea(0)">
             <img id="main-menu-item1-imgLeft" src="img/item-list-active.png" class="img-item-list-active hidden"/>
             <p id="main-menu-item1" onclick="switchTo('profile-page');">Who's Joel López</p>
             <img id="main-menu-item1-imgRight" src="img/item-list-active.png" class="img-item-list-active hidden" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);"/>
           </div>
           
-          <div id="div-main-menu-item2" class="div-main-menu-item d-flex flex-row align-items-center">
+          <div id="div-main-menu-item2" class="div-main-menu-item d-flex flex-row align-items-center" onmouseover="captionTextarea('main-menu_projects');" onmouseleave="captionTextarea(0)">
             <img id="main-menu-item2-imgLeft" src="img/item-list-active.png" class="img-item-list-active hidden"/>
             <p id="main-menu-item2" onclick="switchTo('projects-page');">I want to see stuff!</p>
             <img id="main-menu-item2-imgRight" src="img/item-list-active.png" class="img-item-list-active hidden" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);"/>
           </div>
 
-          <div id="div-main-menu-item3" class="div-main-menu-item d-flex flex-row align-items-center">
+          <div id="div-main-menu-item3" class="div-main-menu-item d-flex flex-row align-items-center" onmouseover="captionTextarea('main-menu_tools');" onmouseleave="captionTextarea(0)">
             <img id="main-menu-item3-imgLeft" src="img/item-list-active.png" class="img-item-list-active hidden"/>
             <p id="main-menu-item3" onclick="switchTo('tools-page');">Preferred tools</p>
             <img id="main-menu-item3-imgRight" src="img/item-list-active.png" class="img-item-list-active hidden" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);"/>
           </div>
 
-          <div id="div-main-menu-item4" class="div-main-menu-item d-flex flex-row align-items-center">
+          <div id="div-main-menu-item4" class="div-main-menu-item d-flex flex-row align-items-center" onmouseover="captionTextarea('main-menu_contact');" onmouseleave="captionTextarea(0)">
             <img id="main-menu-item4-imgLeft" src="img/item-list-active.png" class="img-item-list-active hidden"/>
             <p id="main-menu-item4" onclick="switchTo('contact-page');">How can we meet</p>
             <img id="main-menu-item4-imgRight" src="img/item-list-active.png" class="img-item-list-active hidden" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);"/>
@@ -177,6 +178,10 @@
     <div id="contact-page" style="display: none;">
 
     </div>
+
+
+    <!-- More scripts -->
+    <script src="js/textareaHelper.js"></script>
 
 </body>
 

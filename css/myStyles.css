@@ -48,6 +48,11 @@ body {
     text-shadow: 0 0 2px rgb(154, 218, 255), 0 0 2em rgb(64, 226, 255);
 }
 
+#img-yoel-talking-face {
+    padding-right: 0.5rem;
+    top: 45%;
+}
+
 /* Main Cover Menu - - - - - - - - - - - - - - - - - - - - - - - - - */
 #img-yoel-cover-face {
     right: 65%;
@@ -58,22 +63,22 @@ body {
     right: 55%;
 }
 
-#div-welcome-titles {
+.div-welcome-titles {
     margin-left: 40%;
     padding-top: 3rem;
 }
-#div-welcome-titles h1, h2 {
+.div-welcome-titles h1, h2 {
     color: rgb(197, 197, 197);
     padding: 2rem 1rem 1rem 2rem;
 }
-#div-welcome-titles h1:hover, h2:hover{
+.div-welcome-titles h1:hover, h2:hover{
     color: white;
 }
-#div-welcome-titles h3, h4, h5 {
+.div-welcome-titles h3, h4, h5 {
     color: rgb(174, 206, 255);
     padding: 0.5rem;
 }
-#div-welcome-titles h3:hover, h4:hover, h5:hover {
+.div-welcome-titles h3:hover, h4:hover, h5:hover {
     color: rgb(238, 245, 255);
 }
 .div-text {
@@ -88,10 +93,10 @@ body {
     margin: 0 3rem 0 3rem;
     padding: 0 2rem 0 2rem;
     width: 60%;
-    background: linear-gradient(90deg, rgba(0,0,0,0), rgba(0, 0, 0, 0.1), rgba(0,0,0,0));
+    background: linear-gradient(90deg, rgba(0,0,0,0), rgba(0, 0, 0, 0.18), rgba(0,0,0,0));
 }
 
-.div-main-menu-item p {
+/*.div-main-menu-item p {
     margin: 1rem;
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
 }
@@ -102,12 +107,140 @@ body {
     cursor: pointer;
 }
 .div-main-menu-item:hover {
-    background: linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0));
+    background: linear-gradient(90deg, rgba(0,0,0,0), rgb(0, 183, 255), rgba(0,0,0,0));
 }
 .div-main-menu-item:hover p {
     color: white;
+}*/
+.div-main-menu-item {
+    margin-bottom: 0.5rem;
+
+}
+.div-main-menu-item p {
+    margin: 1rem;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
+.div-main-menu-item p {
+    text-transform: uppercase;
+    font-size: 125%;
+    color: rgb(203, 245, 255);
+    cursor: pointer;
+}
+.div-main-menu-item:hover {
+    background:  rgb(0, 183, 255);
+}
+.div-main-menu-item:hover p {
+    color: rgb(0, 0, 80);
 }
 .div-main-menu-item:hover > .hidden{
     opacity: 1;
     transition: opacity 0.2s;
+}
+
+/* Profile Page - - - - - - - - - - - - - - - - - - - - - - - - - */
+#img-yoel-profile-working {
+    right: 65%;
+    top: 13vh;
+}
+
+.interactive-list-text {
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+.interactive-list-text h5 {
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+.interactive-list-text:hover {
+    margin-left: 3rem;
+    background: linear-gradient(90deg, rgba(11, 125, 255, 0.25), rgba(11, 125, 255, 0.1), rgba(0,0,0,0));
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+.gradient-green:hover {
+    background: linear-gradient(90deg, rgba(39, 255, 11, 0.25), rgba(19, 255, 11, 0.1), rgba(0, 0, 0, 0));
+}
+.gradient-red:hover {
+    background: linear-gradient(90deg, rgba(255, 11, 11, 0.25), rgba(255, 11, 11, 0.1), rgba(0, 0, 0, 0));
+}
+.gradient-blue:hover {
+    background: linear-gradient(90deg, rgba(0, 225, 255, 0.384), rgba(0, 195, 255, 0.1), rgba(0, 0, 0, 0));
+}
+.interactive-list-text:hover h5 {
+    margin-left: 2rem;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.profile-value {
+    height: 5rem;
+}
+.profile-value-next, .profile-value-prev {
+    height: 6vh;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    vertical-align: middle;
+    opacity: 0.3;
+}
+.slider-value-item {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+}
+#div-values-cards {
+    align-items: center;
+    width: 65%;
+    /*height: 4rem;*/
+    margin: 1rem 6rem 1rem 6rem;
+    padding-top: 0.5rem;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+.profile-value-next:hover, .profile-value-prev:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+.profile-value-next:active, .profile-value-prev:active {
+    cursor: pointer;
+    content: url('../img/value-next-hover.png');
+}
+
+#div-profile-main-buttons {
+    width: 50%;
+    padding-top: 1rem;
+}
+.div-2-buttons-container {
+    margin: 1rem 6rem 1rem 6rem;
+}
+
+.soft-neon-button {
+    font-size: 24px;
+    text-transform: uppercase;
+    width: 200px;
+    margin: 1rem;
+    padding: 1rem 3rem 1rem 3rem;
+    border-style: unset;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
+}
+.soft-neon-button:hover {
+    color: rgb(0, 10, 39);
+    background-color: rgb(0, 183, 255);
+    box-shadow: 0 0 10px rgb(0, 183, 255), 0 0 30px rgb(0, 183, 255), 0 0 60px rgb(0, 183, 255);
+}
+
+.in-title-text {
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: rgb(0, 183, 255);
+    border: none;
+    border-radius: 6px;
+    color: rgb(0, 33, 83);
+}
+.in-title-text:hover {
+    background-color: rgb(134, 221, 255);
 }

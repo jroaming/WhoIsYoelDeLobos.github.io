@@ -14,7 +14,9 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/mySpacing.css">
     <link rel="stylesheet" href="css/myStyles.css">
+    <link rel="stylesheet" href="css/projectsStyles.css">
     <link rel="stylesheet" href="css/myBackgroundFX.css">
     <link rel="stylesheet" href="css/myImagesFX.css">
     <link rel="stylesheet" href="css/myAdditionalFX.css">
@@ -36,7 +38,7 @@
     <script src="js/mouseGlow+Sound.js"></script>
 
 
-    <title>Yoel de Lobos Portfolio</title>
+    <title>Joel López Portfolio</title>
   
   </head>
 
@@ -84,21 +86,21 @@
       <img src="img/yoel-blued-cover-face.png" id="img-yoel-cover-face" onmouseover="captionTextarea('home-face-img');" onmouseleave="captionTextarea(0)"/>
       <img src="img/joel-title-white-glow-maxsize.png" id="img-joel-title-cover" onmouseover="captionTextarea('home-name-img');" onmouseleave="captionTextarea(0)"/>
 
-      <div id="div-welcome-titles">
-        <h2>Welcome to my workplace!</h2>
+      <div class="div-welcome-titles">
+        <h2>Make yourself at home!</h2>
         <!--<h4>I hope this portfolio is to your liking! <span style="font-size: 1rem; font-weight: 400;font-style: italic;">-tips are appreciated-</span></h4>-->
         <div class="div-text">
           <h5>
             <p>I'm a videogame developer and artist (no matter 2D or 3D),</p>
-            <p style="padding-left: 0%;">and this is my webfolio. Make yourself at home!</p>
+            <p>and this is my webfolio.</p>
           </h5>
           
           <h5>You can also read some explanations up left, on the <span style="color: rgb(223, 176, 255);">text area</span>. It may be helpful!</h5>
         </div>
-        <h2>So... ¿what do you want to know?</h2>
+        <h2>Here, have a look:</h2>
 
         <div id="div-main-menu" class="d-flex flex-column align-items-center">
-
+          <!--
           <div id="div-main-menu-item1" class="div-main-menu-item d-flex flex-row align-items-center" onmouseover="captionTextarea('main-menu_profile');" onmouseleave="captionTextarea(0)">
             <img id="main-menu-item1-imgLeft" src="img/item-list-active.png" class="img-item-list-active hidden"/>
             <p id="main-menu-item1" onclick="switchTo('profile-page');">Who's Joel López</p>
@@ -122,7 +124,21 @@
             <p id="main-menu-item4" onclick="switchTo('contact-page');">How can we meet</p>
             <img id="main-menu-item4-imgRight" src="img/item-list-active.png" class="img-item-list-active hidden" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);"/>
           </div>
-
+          -->
+          <div class="div-2-buttons-container d-flex flex-wrap justify-content-center">
+            <button id="main-menu-item1" class="soft-neon-button"
+              onclick="switchTo('profile-page')"
+              onmouseover="captionTextarea('main-menu_profile');"
+              onmouseleave="captionTextarea(0)">Profile</button>
+            <button id="main-menu-item2" class="soft-neon-button"
+              onclick="switchTo('projects-page')"
+              onmouseover="captionTextarea('main-menu_projects');"
+              onmouseleave="captionTextarea(0)">Projects</button>
+            <button id="main-menu-item4" class="soft-neon-button"
+              onclick="switchTo('contact-page')"
+              onmouseover="captionTextarea('main-menu_contact');"
+              onmouseleave="captionTextarea(0)">Contact</button>
+          </div>
         </div>
 
       </div>
@@ -131,16 +147,18 @@
 
     <!-- ***************************************************************************** MY PROFILE -->
     <div id="profile-page" style="display: none;">
-      <img/>
+      <div id="div-profile-img-card">
+          <img id="img-yoel-profile-working" src="img/joel-profile-working.png" onmouseover="captionTextarea('profile-joel-working-img');" onmouseleave="captionTextarea(0)"/>
+      </div>
       
-      <div id="div-welcome-titles">  
-        <h2>Joel López Romero</h2>
+      <div class="div-welcome-titles">
+        <h2 class="">Joel López Romero</h2>
 
         <div class="div-text interactive-list-text">
-          <h5>Born in Barcelona, May 24th 1997 (23).</h5>
+          <h5>Born + living in Barcelona, May 24th 1997 (23).</h5>
         </div>
         <div class="div-text interactive-list-text">
-          <h5>Degree in Multimedia Engineering, minor in videogames <span style="font-size: 1rem;">(currently working on the Final Degree Project)</span>.</h5>
+          <h5>Degree in Multimedia Engineering, minor in videogames<span style="font-size: 1rem;"> (currently working on the Final Degree Project)</span>.</h5>
         </div>
         <div class="div-text interactive-list-text">
           <h5>Indie videogame developer, writer, web designer <span style="font-size: 1rem;">(80% front-end, 20% back-end)</span> and artist.</h5>
@@ -148,25 +166,94 @@
 
       </div>
 
-      <div id="div-welcome-titles" style="padding-top: 0;">  
-        <h2>My daily goals</h2>
+      <div class="div-welcome-titles" style="padding-top: 0;">  
+        <h2>My values</h2>
         
-        <div class="div-text interactive-list-text">
-          <h5>Creating stories and shaping them as clear as possible.</h5>
+        <div id="div-values-cards" class="d-flex justify-content-between">
+          <img id="img-value-prev" src="img/value-next.png" class="slider-value-item reversed-horizontal profile-value-prev" onclick="plusDivs(-1)"/>
+          <img id="img-value-passion" src="img/value-passion.png" class="slider-value-item profile-value value-slides" onclick="plusDivs(+1)"/>
+          <img id="img-value-commitment" src="img/value-commitment.png" class="slider-value-item profile-value value-slides" onclick="plusDivs(+1)"/>
+          <img id="img-value-respect" src="img/value-respect.png" class="slider-value-item profile-value value-slides" onclick="plusDivs(+1)"/>
+          <img id="img-value-next" src="img/value-next.png" class="slider-value-item profile-value-next" onclick="plusDivs(+1)"/>
+      </div>
+
+      </div>
+
+      <!--
+      <div class="div-welcome-titles">
+        <h2 class="nopadding paddingleft2">My geek side</h2>
+
+        <div class="div-text interactive-list-text gradient-green">
+          <h5>Ravenclaw at heart, yet Slytherin if needed.</h5>
         </div>
-        <div class="div-text interactive-list-text">
-          <h5>Respect + responsibility: the unwavering path to efficient teamwork.</h5>
+        <div class="div-text interactive-list-text gradient-red">
+          <h5>Dark Souls speedrunner. Chaos Zweihander +5 when I'm going casual.</h5>
         </div>
-        <div class="div-text interactive-list-text">
-          <h5>Giving my best for a good result!</h5>
+        <div class="div-text interactive-list-text gradient-blue">
+          <h5>Lost my horse in Rivendel. Still looking for the ring, though.</h5>
+        </div>
+      </div>
+      -->
+
+      <div id="div-profile-main-buttons" class="div-welcome-titles d-flex justify-content-around">
+        <div class="div-2-buttons-container d-flex flex-row justify-content-center">
+          <button id="main-menu-item1" class="soft-neon-button"
+              onclick="switchTo('main-cover')"
+              onmouseover="captionTextarea('main-cover');"
+              onmouseleave="captionTextarea(0)">Home</button>
+            <button id="main-menu-item2" class="soft-neon-button"
+              onclick="switchTo('projects-page')"
+              onmouseover="captionTextarea('main-menu_projects');"
+              onmouseleave="captionTextarea(0)">Projects</button>
         </div>
 
       </div>
+      
     </div>
 
     <!-- ***************************************************************************** PROJECTS -->
     <div id="projects-page" style="display: none;">
+      <div class="d-flex flex-row">
+        <div id="left-side">
+          <div id="projects-list">
+            <div id="project1" class="project-list-item project1-image"></div>
+          </div>
+        </div>
 
+        <div id="center-side">
+          <div id="projects-info">
+            
+            <div id="project01" class="project-item">
+              <div class="project-item-title">
+                <h1>Way to go!</h1>
+                <h4>King [NotOnlyGames]Jam 2019</h4>
+              </div>
+
+              <div class="project-item-info">
+                <div class="d-flex flex-row align-items-center margin1"><button class="in-title-text" disabled>Platform / Description</button>
+                  <p>PC Videogame (developed in Unity)</p>
+                </div>
+                <div class="margin1">
+                  <p>Local multiplayer game where there can be as much players as letters has the keyboard of your computer. One key, one player.
+                  <br>Press your key to make your character advance and push the walls to destroy them! Team size recommended: 8 players or higher.</p>
+                </div>
+                <div class="d-flex flex-row align-items-center margin1"><button class="in-title-text" disabled>Role</button>
+                  <p>Full 3D modeler (characters + levels design)</p>
+                </div>
+                <div class="d-flex flex-row align-items-center margin1"><button class="in-title-text" disabled>Grade</button>
+                  <p><i>Most creative game</i> Award<img src="https://thumbs.gfycat.com/BrilliantDefensiveIslandwhistler-max-1mb.gif" class="margin1" style="width: 24px;height: auto;"/></p>
+                </div>
+                <div class="d-flex flex-row align-items-center margin1"><button class="in-title-text" disabled>Additional Links</button>
+                  <p>Enlace de ejemplo</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        
+          <div id="projects-menu"></div>
+        </div>
+      </div>
     </div>
 
     <!-- ***************************************************************************** TOOLS -->
@@ -182,7 +269,8 @@
 
     <!-- More scripts -->
     <script src="js/textareaHelper.js"></script>
-
+    <script src="js/valuesSlideController.js"></script>
+    <script src="js/image3DFX.js"></script>
 </body>
 
 </html>

@@ -34,6 +34,10 @@ var helpTextarea = [
     {
         code: "home-name-img",
         text: "And that's me! Pleased to meet you!",
+    },
+    {
+        code: "profile-joel-working-img",
+        text: "Trust me, that photo was the best one..."
     }
 ];
 

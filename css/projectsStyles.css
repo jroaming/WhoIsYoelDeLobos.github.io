@@ -32,11 +32,28 @@
 #left-side {
     width: 350px;
     margin: 5% 2rem 5% 10%;
-    max-height: 70%;
-    height: auto;
+    max-height: 65vh;
+    height: 65vh;
     background-color: rgba(0, 0, 0, 0.3);
     padding: 2rem;
+    overflow: auto;
+    background-color: linear-gradient(#001430, rgba(0, 132, 255, 0), #001430);
+    box-shadow: inset;
 }
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+    background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+}
+::-webkit-scrollbar-thumb {
+    height: 20%;
+    background: rgb(255, 255, 255);
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+    /*-webkit-box-shadow: inset 0 0 3px rgb(0, 0, 0); */
+}
+
 
 #center-side {
     height: auto;
@@ -57,18 +74,32 @@
     background-repeat: no-repeat;
     background-size: cover;
     
-    border: 4px solid rgb(4, 103, 196);
+    /*border: 4px solid rgb(4, 103, 196);*/
     border-radius: 12px;
     transform: scale(0.8);
-    opacity: 0.7;
-    transition: 0.5s;
+    opacity: 0.4;
+    transition: 0.3s;
 }
 .project-list-item:hover {
     cursor: pointer;
+    transform: scale(0.9);
+    /*border: 4px solid rgb(99, 192, 255);*/
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.active-project-info {
+    cursor: auto;
     transform: scale(1);
-    border: 4px solid rgb(140, 199, 255);
+    border: 4px solid white;
     opacity: 1;
-    transition: 0.5s;
+
+}
+.active-project-info:hover {
+    cursor: auto;
+    transform: scale(1);
+    border: 4px solid white;
+    opacity: 1;
+
 }
 
 .project-item {
@@ -97,4 +128,21 @@
 .project1-image {
     background-image: url('../img/proj01-img01.png');
     background-position-y: bottom;
+    background-position-x: center;
+}
+.project2-image {
+    background-image: url('../img/proj02-img01.png');
+    background-position-y: center;
+    background-position-x: center;
+}
+.project3-image {
+    background-image: url('../img/proj03-img01.png');
+    background-position-y: center;
+    background-position-x: center;
+}
+.project4-image {
+    background-image: url('../img/proj04-img01.png');
+    background-position-y: top;
+    background-position-x: center;
+
 }

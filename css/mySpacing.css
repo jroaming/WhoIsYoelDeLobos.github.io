@@ -34,6 +34,9 @@
 .nomargin {
     margin: 0;
 }
+.margin0 {
+    margin: 0.5rem;
+}
 .margin1 {
     margin: 1rem;
 }

@@ -5,35 +5,39 @@ var textarea = $('#textAreaHelper')[0];
 var helpTextarea = [
     {
         code: '0',
-        text: 'No entries found.',
+        text: 'No entries found.'
+    },
+    {
+        code: 'yup-i-know',
+        text: 'That\'s right. \"Perfection can\'t be achieved.\"'
     },
     {
         code: 'main-menu_home',
-        text: 'Go to the welcome page, with the main menu in it.',
+        text: 'Go to the welcome page, with the main menu in it.'
     },
     {
         code: "main-menu_profile",
-        text: "This leads to my profile page.",
+        text: "This leads to my profile page."
     },
     {
         code: "main-menu_projects",
-        text: "Here you'll find my most \"emblematic\" projects.",
+        text: "Here you'll find my most \"emblematic\" projects."
     },
     {
         code: "main-menu_tools",
-        text: "Every software I've used on my projects.",
+        text: "Every software I've used on my projects."
     },
     {
         code: "main-menu_contact",
-        text: "Here you can find all ways of contacting me.",
+        text: "Here you can find all ways of contacting me."
     },
     {
         code: "home-face-img",
-        text: "Yup! That's (almost) my face!",
+        text: "Yup! That's (almost) my face!"
     },
     {
         code: "home-name-img",
-        text: "And that's me! Pleased to meet you!",
+        text: "And that's me! Pleased to meet you!"
     },
     {
         code: "profile-joel-working-img",

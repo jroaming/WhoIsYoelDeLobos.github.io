@@ -244,3 +244,41 @@ body {
 .in-title-text:hover {
     background-color: rgb(134, 221, 255);
 }
+.button-link {
+    text-transform: none;
+    background-color: rgba(248, 236, 60, 0.7);
+    transition: 0.1s;
+}
+.button-link:hover {
+    background-color: rgba(255, 238, 0, 1);
+    text-decoration: underline;
+    box-shadow: 0 0 10px rgb(255, 238, 0);
+    transition: 0.1s;
+}
+.button-download {
+    color: white;
+    text-transform: none;
+    font-weight: 300;
+    background-color: rgba(248, 60, 60, 0.7);
+    transition: 0.1s;
+}
+.button-download:hover {
+    background-color: rgb(255, 0, 0);
+    text-decoration: underline;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    color: white;
+    transition: 0.1s;
+}
+.button-presskit {
+    color: white;
+    text-transform: none;
+    font-weight: 300;
+    background-color: rgba(117, 0, 163, 0.7);
+    transition: 0.1s;
+}
+.button-presskit:hover {
+    background-color: rgb(162, 0, 255);
+    text-decoration: underline;
+    box-shadow: 0 0 10px rgb(162, 0, 255);
+    transition: 0.1s;
+}

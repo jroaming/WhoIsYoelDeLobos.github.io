@@ -19,6 +19,16 @@
     50% {opacity: 1;}
     100% {opacity: 0.75;}
 }
+@keyframes shinny-icon-anim {
+    0%, 100%  {
+        opacity: 0.8;
+        filter: drop-shadow(0px 0px 10px rgb(255, 251, 0)) drop-shadow(0px 0px 10px rgba(255, 251, 0, 0.3));
+    }
+    50% {
+        opacity: 1;
+        filter: drop-shadow(0px 0px 15px rgb(255, 251, 0)) drop-shadow(0px 0px 20px rgba(255, 251, 0, 0.3));
+    }
+}
 
 /* STANDARD CSS */
 #img-yoel-cover-face {
@@ -74,4 +84,14 @@
 }
 .profile-value-prev:hover {
     transform: scale(-1.15);
+}
+
+.shinny-icon {
+    opacity: 0.8;
+    animation: shinny-icon-anim 1.5s ease-in-out infinite;
+}
+.shinny-icon:hover {
+    opacity: 1;
+    animation: none;
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 255, 255, 0.85));
 }

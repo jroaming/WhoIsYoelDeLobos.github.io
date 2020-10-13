@@ -5,7 +5,8 @@ var projectImagesList = [
     document.getElementsByClassName("project1-img"),
     document.getElementsByClassName("project2-img"),
     document.getElementsByClassName("project3-img"),
-    document.getElementsByClassName("project4-img")
+    document.getElementsByClassName("project4-img"),
+    document.getElementsByClassName("project5-img")
 ];
 
 function swapToProject(togo) {
@@ -34,7 +35,9 @@ function swapProjectImage(nProject, action) {
 
         }
         //el primer (y unico) elemento que tenga la clase 'project-image-list-active' será del que haya que borrarlo.
-        document.getElementsByClassName("project-image-list-active")[0].classList.remove("project-image-list-active");
+        var activeItems = document.getElementsByClassName("project-image-list-active");
+        for (let iImage = 0; iImage < activeItems.length; iImage++)
+            activeItems[iImage].classList.remove("project-image-list-active");
 
         if (iProjectImage + action > maxImageIndex) iProjectImage = 1; //si damos a next y ya esta en la última imagen
         else {
@@ -47,9 +50,23 @@ function swapProjectImage(nProject, action) {
         //console.log(iProjectImage);
         projectImagesList[nProject-1][iProjectImage-1].classList.add("project-image-list-active");
         projectImagesList[nProject-1][iProjectImage-1].style.display = "block";
+
+        /*
+        let shinnyIconsFullscreen = document.getElementsByClassName("shinny-icon");
+        for (let iAux = 0; iAux < shinnyIconsFullscreen.length; iAux++) shinnyIconsFullscreen[iAux].classList.remove('shinny-icon');
+        if(nProject == 3 && (iProjectImage == 1 || iProjectImage == 8)) {
+            $('#proj3-full-icon')[0].classList.add('shinny-icon');
+        }
+        */
+
     }
 }
 
 function loadFullscreenImage(nProject) {
-    alert("Not implemented yet! Sorry :(");
+    let imgFormat = (nProject ==5? '.jpg' : '.png');
+    
+    let imgToOpen = document.getElementsByClassName('project-image-list-active')[0];
+    var myWindow = window.open(imgToOpen.src, "fullscreen_image", "_blank", "toolbar=no,scrollbars=no,resizable=yes");
+
+    return myWindow;
 }

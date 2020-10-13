@@ -221,6 +221,7 @@
             <div id="project-list-item2" class="project-list-item project2-image" onclick="swapToProject(2)"></div>
             <div id="project-list-item3" class="project-list-item project3-image" onclick="swapToProject(3)"></div>
             <div id="project-list-item4" class="project-list-item project4-image" onclick="swapToProject(4)"></div>
+            <div id="project-list-item5" class="project-list-item project5-image" onclick="swapToProject(5)"></div>
 
           </div>
         </div>
@@ -238,7 +239,7 @@
 
                 <div class="project-item-info marginbottom1">
                   
-                  <div id="project-info">
+                  <div id="project-info" class="div-project-info">
 
                     <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
                       <p>PC Videogame (developed in Unity)</p>
@@ -293,7 +294,7 @@
 
               <div class="project-item-info marginbottom1">
                 
-                <div id="project-info">
+                <div id="project-info" class="div-project-info">
                   <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
                     <p>VR Experience for PC (Unreal Engine 4)</p>
                   </div>
@@ -316,7 +317,8 @@
 
                 <div id="div-project2-images" class="project-images d-flex flex-column">
                   <div id="div-project2-img-list">
-                    <img id="img-project2-1" src="img/proj02/proj02-img02.png" class="project2-img project-img-list project-image-list-active"/>
+                    <iframe id="video-project2-1" src="https://www.youtube.com/embed/sqbXSjHgzu0" class="project2-img project-img-list project-image-list-active" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <img id="img-project2-1" src="img/proj02/proj02-img02.png" class="project2-img project-img-list"/>
                     <img id="img-project2-1" src="img/proj02/proj02-img03.png" class="project2-img project-img-list"/>
                     <img id="img-project2-2" src="img/proj02/proj02-img04.png" class="project2-img project-img-list"/>
                     <img id="img-project2-3" src="img/proj02/proj02-img05.png" class="project2-img project-img-list"/>
@@ -341,7 +343,7 @@
 
               <div class="project-item-info marginbottom1">
 
-                <div id="project-info">
+                <div id="project-info" class="div-project-info">
 
                   <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
                     <p>PC Videogame (developed in Unity)</p>
@@ -371,16 +373,19 @@
                 <div id="div-project3-images" class="project-images d-flex flex-column">
                   <div id="div-project3-img-list">
                     <img id="img-project3-1" src="img/proj03/proj03-img02.png" class="project3-img project-img-list project-image-list-active"/>
+                    <iframe id="video-project3-1" src="https://www.youtube.com/embed/ljM-YuVomEY" class="project3-img project-img-list" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="video-project3-2" src="https://www.youtube.com/embed/vU_sHsKl-p8" class="project3-img project-img-list" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <img id="img-project3-2" src="img/proj03/proj03-img03.png" class="project3-img project-img-list"/>
                     <img id="img-project3-3" src="img/proj03/proj03-img04.png" class="project3-img project-img-list"/>
                     <img id="img-project3-4" src="img/proj03/proj03-img05.png" class="project3-img project-img-list"/>
                     <img id="img-project3-5" src="img/proj03/proj03-img06.png" class="project3-img project-img-list"/>
+                    <img id="img-project3-6" src="img/proj03/proj03-full-char-spritesheet.png" class="project3-img project-img-list"/>
                   </div>
 
                   <div id="div-proj-img-list-controller" class="d-flex flex-row justify-content-center margin1">
-                    <img src="img/img-list-prev.png" class="project-img-list-controller" onclick="swapProjectImage(3,-1)"/>
-                    <img src="img/img-list-full.png" class="project-img-list-controller" onclick="loadFullscreenImage(3)"/>
-                    <img src="img/img-list-next.png" class="project-img-list-controller" onclick="swapProjectImage(3,1)"/>
+                    <img id="proj3-prev-icon" src="img/img-list-prev.png" class="project-img-list-controller" onclick="swapProjectImage(3,-1)"/>
+                    <img id="proj3-full-icon" src="img/img-list-full.png" class="project-img-list-controller" onclick="loadFullscreenImage(3)"/>
+                    <img id="proj3-next-icon" src="img/img-list-next.png" class="project-img-list-controller" onclick="swapProjectImage(3,1)"/>
                   </div>
                 </div>
 
@@ -396,7 +401,7 @@
 
               <div class="project-item-info marginbottom1">
 
-                <div id="project-info">
+                <div id="project-info" class="div-project-info">
 
                   <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
                     <p>Mobile Game for Android (Unity)</p>
@@ -421,7 +426,8 @@
 
                 <div id="div-project4-images" class="project-images d-flex flex-column">
                   <div id="div-project4-img-list">
-                    <img id="img-project4-1" src="img/proj04/proj04-img02.png" class="project4-img project-img-list project-image-list-active"/>
+                    <iframe id="video-project4-1" src="https://www.youtube.com/embed/d1E6gw43WQ4" class="project4-img project-img-list project-image-list-active" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <img id="img-project4-1" src="img/proj04/proj04-img02.png" class="project4-img project-img-list"/>
                     <img id="img-project4-2" src="img/proj04/proj04-img03.png" class="project4-img project-img-list"/>
                     <img id="img-project4-3" src="img/proj04/proj04-img04.png" class="project4-img project-img-list"/>
                     <img id="img-project4-4" src="img/proj04/proj04-img05.png" class="project4-img project-img-list"/>
@@ -439,9 +445,61 @@
               </div>
             </div>
 
+            <!-- PROJECT 05: CRÓNICAS DE NEMURA -->            
+            <div id="project05" class="project-item" style="display: none;">
+              <div class="project-item-title">
+                <h1><i>Crónicas de Nemura</i></h1>
+                <h4>Episodes I - V</h4>
+              </div>
+
+              <div class="project-item-info marginbottom1">
+
+                <div id="project-info" class="div-project-info">
+
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
+                    <p>Digital Book</p>
+                  </div>
+                  <div class="margin0 marginbottom1">
+                    <p>Immerse yourself in the devastated lands of Nemura, where an arcane power threatens to bring back
+                      destruction and death once again.
+                    <br>The fate of certain characters seems to intertwine little by little: a wizard raven wrongly condemned,
+                    a dangerous prisoner with a hunger for power and a strange young man with amnesia in search of his past.
+                    Who will survive this time trial against the Ancients of Nemura?
+                  </p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Role</button>
+                    <p>Author / Illustrator</p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center margin0"><button class="alert-title-text" disabled>Info</button>
+                    <p>This product is currently only available in Spanish.</p>
+                  </div>
+                </div>
+
+                <div id="div-project5-images" class="project-images d-flex flex-column">
+                  <div id="div-project5-img-list">
+                    <div class="project-image-overflow">
+                      <img id="img-project5-1" src="img/proj05/proj05-img02.jpg" class="project5-img project-img-list project-image-list-active"/>
+                    </div>
+                    <img id="img-project5-2" src="img/proj05/proj05-img03.jpg" class="project5-img project-img-list"/>
+                    <img id="img-project5-3" src="img/proj05/proj05-img04.jpg" class="project5-img project-img-list"/>
+                    <img id="img-project5-4" src="img/proj05/proj05-img05.jpg" class="project5-img project-img-list"/>
+                    <img id="img-project5-5" src="img/proj05/proj05-img06.jpg" class="project5-img project-img-list"/>
+                    <img id="img-project5-6" src="img/proj05/proj05-img07.jpg" class="project5-img project-img-list"/>
+                  </div>
+
+                  <div id="div-proj-img-list-controller" class="d-flex flex-row justify-content-center margin1">
+                    <img src="img/img-list-prev.png" class="project-img-list-controller" onclick="swapProjectImage(5,-1)"/>
+                    <img src="img/img-list-full.png" class="project-img-list-controller" onclick="loadFullscreenImage(5)"/>
+                    <img src="img/img-list-next.png" class="project-img-list-controller" onclick="swapProjectImage(5,1)"/>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
           </div>
-        
-          <div id="projects-menu"></div>
+
         </div>
 
         <!--<div id="right-side">

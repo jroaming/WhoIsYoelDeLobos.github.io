@@ -36,7 +36,6 @@
 
     <script src="js/menuController.js"></script>
     <script src="js/mouseGlow+Sound.js"></script>
-    <script src="js/projectsController.js"></script>
 
 
     <title>Joel López Portfolio</title>
@@ -214,7 +213,7 @@
 
     <!-- ***************************************************************************** PROJECTS -->
     <div id="projects-page" style="display: none;">
-      <div class="d-flex flex-row">
+      <div id="projects-page-content" class="d-flex flex-row">
         <div id="left-side">
           <!-- PROJECTS THUMBNAIL LIST -->
           <div id="projects-list">
@@ -222,45 +221,69 @@
             <div id="project-list-item2" class="project-list-item project2-image" onclick="swapToProject(2)"></div>
             <div id="project-list-item3" class="project-list-item project3-image" onclick="swapToProject(3)"></div>
             <div id="project-list-item4" class="project-list-item project4-image" onclick="swapToProject(4)"></div>
-            <div id="project-list-item5" class="project-list-item project1-image" onclick="swapToProject(5)"></div>
 
           </div>
         </div>
 
         <div id="center-side">
-          <div id="projects-info">
+          <div id="projects-info" class="d-flex flex-column">
             
             <!-- PROJECT 01: WAY TO GO! -->            
-            <div id="project01" class="project-item" style="display: none;">
-              <div class="project-item-title">
-                <h1>Way to go!</h1>
-                <h4>King [NotOnlyGames]Jam 2019</h4>
+            <div class="d-flex flex-row justify-content-around">
+              <div id="project01" class="project-item" style="display: none;">
+                <div class="project-item-title">
+                  <h1>Way to go!</h1>
+                  <h4>King [NotOnlyGames]Jam 2019</h4>
+                </div>
+
+                <div class="project-item-info marginbottom1">
+                  
+                  <div id="project-info">
+
+                    <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
+                      <p>PC Videogame (developed in Unity)</p>
+                    </div>
+                    <div class="margin0 marginbottom1">
+                      <p>Local multiplayer game where there can be as much players as letters has the keyboard of your computer. One key, one player.
+                      <br>Press your key to make your character advance and push the walls to destroy them! Team size recommended: 8 or more players.</p>
+                    </div>
+                    <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Role</button>
+                      <p>3D artist / Programmer</p>
+                    </div>
+                    <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Grade</button>
+                      <p onmouseover="captionTextarea('yup-i-know');" onmouseleave="captionTextarea(0)">
+                        <i style="color: rgba(255, 238, 0, 1);">Most creative game</i> Award
+                        <img src="https://thumbs.gfycat.com/BrilliantDefensiveIslandwhistler-max-1mb.gif" class="margin1" style="width: 24px;height: auto;"/>
+                      </p>
+                    </div>
+                    <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Additional Links</button>
+                      <a href="https://ricardjuan.itch.io/way-to-go" target="_blank"><button class="in-title-text button-link">itch.io</button></a>
+                      <a href="https://mega.nz/file/EVAUwRzI#FnWxBDMGCSPXHXRpBbcgZ78u8LU0bbL_i4BwCOhEaxE" target="_blank"><button class="in-title-text button-download">direct download</button></a>
+                    </div>
+
+                  </div>
+
+                  <div id="div-project1-images" class="project-images d-flex flex-column">
+                    <div id="div-project1-img-list">
+                      <img id="img-project1-1" src="img/proj01/proj01-img03.png" class="project1-img project-img-list project-image-list-active"/>
+                      <img id="img-project1-2" src="img/proj01/proj01-img04.png" class="project1-img project-img-list"/>
+                      <img id="img-project1-3" src="img/proj01/proj01-img05.png" class="project1-img project-img-list"/>
+                      <img id="img-project1-4" src="img/proj01/proj01-img06.png" class="project1-img project-img-list"/>
+                      <img id="img-project1-5" src="img/proj01/proj01-img07.png" class="project1-img project-img-list"/>
+                    </div>
+
+                    <div id="div-proj-img-list-controller" class="d-flex flex-row justify-content-center margin1">
+                      <img src="img/img-list-prev.png" class="project-img-list-controller" onclick="swapProjectImage(1,-1)"/>
+                      <img src="img/img-list-full.png" class="project-img-list-controller" onclick="loadFullscreenImage(1)"/>
+                      <img src="img/img-list-next.png" class="project-img-list-controller" onclick="swapProjectImage(1,1)"/>
+                    </div>
+                  </div>
+
+                </div>
               </div>
 
-              <div class="project-item-info marginbottom1">
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
-                  <p>PC Videogame (developed in Unity)</p>
-                </div>
-                <div class="margin0 marginbottom1">
-                  <p>Local multiplayer game where there can be as much players as letters has the keyboard of your computer. One key, one player.
-                  <br>Press your key to make your character advance and push the walls to destroy them! Team size recommended: 8 or more players.</p>
-                </div>
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Role</button>
-                  <p>3D artist (characters + levels design) / Programmer</p>
-                </div>
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Grade</button>
-                  <p onmouseover="captionTextarea('yup-i-know');" onmouseleave="captionTextarea(0)">
-                    <i style="color: rgba(255, 238, 0, 1);">Most creative game</i> Award
-                    <img src="https://thumbs.gfycat.com/BrilliantDefensiveIslandwhistler-max-1mb.gif" class="margin1" style="width: 24px;height: auto;"/>
-                  </p>
-                </div>
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Additional Links</button>
-                  <a href="https://ricardjuan.itch.io/way-to-go" target="_blank"><button class="in-title-text button-link">itch.io</button></a>
-                  <a href="https://mega.nz/file/EVAUwRzI#FnWxBDMGCSPXHXRpBbcgZ78u8LU0bbL_i4BwCOhEaxE" target="_blank"><button class="in-title-text button-download">direct download</button></a>
-                </div>
-              </div>
             </div>
-  
+
             <!-- PROJECT 02: ASYLUM -->
             <div id="project02" class="project-item" style="display: none;">
               <div class="project-item-title">
@@ -269,24 +292,43 @@
               </div>
 
               <div class="project-item-info marginbottom1">
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
-                  <p>VR Experience for PC (Unreal Engine 4)</p>
+                
+                <div id="project-info">
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
+                    <p>VR Experience for PC (Unreal Engine 4)</p>
+                  </div>
+                  <div class="margin0 marginbottom1">
+                    <p>Advance, room after room, through a terrifying VR experience. In order to open your path, the player will have to be very observant and
+                      solve the hidden puzzles until the exit door.
+                      <br>Immersive experience with a gloomy and claustrophobic setting and an excellent focus on indoor lighting.
+                    </p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Role</button>
+                    <p>Concept artist / Game designer / Level designer / Environment artist</p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Grade</button>
+                    <p><b style="color: greenyellow;">9.9 </b>/10 <img src="https://thumbs.gfycat.com/BrilliantDefensiveIslandwhistler-max-1mb.gif" class="margin1" style="width: 24px;height: auto;"/></p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Additional Links</button>
+                    <a href="https://mega.nz/file/VcZiUBwY#hyI0rOJa6eyEMjx6H2iR2k9WddkSwnEj3-MsUjwkHoQ" target="_blank"><button class="in-title-text button-download">direct download</button></a>
+                  </div>
                 </div>
-                <div class="margin0 marginbottom1">
-                  <p>Advance, room after room, through a terrifying VR experience. In order to open your path, the player will have to be very observant and
-                    solve the hidden puzzles until the exit door.
-                    <br>Immersive experience with a gloomy and claustrophobic setting and an excellent focus to indoor lighting.
-                  </p>
+
+                <div id="div-project2-images" class="project-images d-flex flex-column">
+                  <div id="div-project2-img-list">
+                    <img id="img-project2-1" src="img/proj02/proj02-img02.png" class="project2-img project-img-list project-image-list-active"/>
+                    <img id="img-project2-1" src="img/proj02/proj02-img03.png" class="project2-img project-img-list"/>
+                    <img id="img-project2-2" src="img/proj02/proj02-img04.png" class="project2-img project-img-list"/>
+                    <img id="img-project2-3" src="img/proj02/proj02-img05.png" class="project2-img project-img-list"/>
+                  </div>
+
+                  <div id="div-proj-img-list-controller" class="d-flex flex-row justify-content-center margin1">
+                    <img src="img/img-list-prev.png" class="project-img-list-controller" onclick="swapProjectImage(2,-1)"/>
+                    <img src="img/img-list-full.png" class="project-img-list-controller" onclick="loadFullscreenImage(2)"/>
+                    <img src="img/img-list-next.png" class="project-img-list-controller" onclick="swapProjectImage(2,1)"/>
+                  </div>
                 </div>
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Role</button>
-                  <p>Concept artist / Game designer / Level designer / Environment artist</p>
-                </div>
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Grade</button>
-                  <p><b style="color: greenyellow;">9.9 </b>/10 <img src="https://thumbs.gfycat.com/BrilliantDefensiveIslandwhistler-max-1mb.gif" class="margin1" style="width: 24px;height: auto;"/></p>
-                </div>
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Additional Links</button>
-                  <a href="https://mega.nz/file/VcZiUBwY#hyI0rOJa6eyEMjx6H2iR2k9WddkSwnEj3-MsUjwkHoQ" target="_blank"><button class="in-title-text button-download">direct download</button></a>
-                </div>
+
               </div>
             </div>
 
@@ -298,29 +340,50 @@
               </div>
 
               <div class="project-item-info marginbottom1">
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
-                  <p>PC Videogame (developed in Unity)</p>
+
+                <div id="project-info">
+
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
+                    <p>PC Videogame (developed in Unity)</p>
+                  </div>
+                  <div class="margin0 marginbottom1">
+                    <p>Single player action + stealth puzzle game. The player will have to use Abrian's sibiline abilities to beat every level
+                      inside a prison of a fantasy world. You can buy items, leave them on the ground, talk to your "comrades"... and make a
+                      mess out of it.
+                    <br>Old-school pixel art meets modern fast-paced puzzle style in this game, appropriate for understanding how Unity's
+                    <i>StateManager</i> and <i>Animation</i> tools work.</p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Role</button>
+                    <p>Game designer / Programmer / Artist / Presskit manager</p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Grade</button>
+                    <p onmouseover="captionTextarea('yup-i-know');" onmouseleave="captionTextarea(0)">
+                      <p><b style="color: greenyellow;">10 </b>/10 <img src="https://thumbs.gfycat.com/BrilliantDefensiveIslandwhistler-max-1mb.gif" class="margin1" style="width: 24px;height: auto;"/></p>
+                    </p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Additional Links</button>
+                    <a href="https://ricardjuan.itch.io/abrians-outbreak" target="_blank"><button class="in-title-text button-link">itch.io</button></a>
+                    <a href="https://ricardj.github.io/abrians-outbreak.github.io/" target="_blank"><button class="in-title-text button-presskit">game's presskit</button></a>
+                    <a href="https://mega.nz/file/VYZHVQ7D#AoobqYeShx7AmP_Zxq1lZzhQB6QoSivLu-93KkXeVL8" target="_blank"><button class="in-title-text button-download">direct download</button></a>
+                  </div>
                 </div>
-                <div class="margin0 marginbottom1">
-                  <p>Single player action + stealth puzzle game. The player will have to use Abrian's sibiline abilities to beat every level
-                    inside a prison of a fantasy world. You can buy items, leave them on the ground, talk to your "comrades"... and make a
-                    mess out of it.
-                  <br>Old-school pixel art meets modern fast-paced puzzle style in this game, appropriate for understanding how Unity's
-                  <i>StateManager</i> and <i>Animation</i> tools work.</p>
+
+                <div id="div-project3-images" class="project-images d-flex flex-column">
+                  <div id="div-project3-img-list">
+                    <img id="img-project3-1" src="img/proj03/proj03-img02.png" class="project3-img project-img-list project-image-list-active"/>
+                    <img id="img-project3-2" src="img/proj03/proj03-img03.png" class="project3-img project-img-list"/>
+                    <img id="img-project3-3" src="img/proj03/proj03-img04.png" class="project3-img project-img-list"/>
+                    <img id="img-project3-4" src="img/proj03/proj03-img05.png" class="project3-img project-img-list"/>
+                    <img id="img-project3-5" src="img/proj03/proj03-img06.png" class="project3-img project-img-list"/>
+                  </div>
+
+                  <div id="div-proj-img-list-controller" class="d-flex flex-row justify-content-center margin1">
+                    <img src="img/img-list-prev.png" class="project-img-list-controller" onclick="swapProjectImage(3,-1)"/>
+                    <img src="img/img-list-full.png" class="project-img-list-controller" onclick="loadFullscreenImage(3)"/>
+                    <img src="img/img-list-next.png" class="project-img-list-controller" onclick="swapProjectImage(3,1)"/>
+                  </div>
                 </div>
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Role</button>
-                  <p>Game designer / Programmer / Artist / Presskit manager</p>
-                </div>
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Grade</button>
-                  <p onmouseover="captionTextarea('yup-i-know');" onmouseleave="captionTextarea(0)">
-                    <p><b style="color: greenyellow;">10 </b>/10 <img src="https://thumbs.gfycat.com/BrilliantDefensiveIslandwhistler-max-1mb.gif" class="margin1" style="width: 24px;height: auto;"/></p>
-                  </p>
-                </div>
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Additional Links</button>
-                  <a href="https://ricardjuan.itch.io/abrians-outbreak" target="_blank"><button class="in-title-text button-link">itch.io</button></a>
-                  <a href="https://ricardj.github.io/abrians-outbreak.github.io/" target="_blank"><button class="in-title-text button-presskit">game's presskit</button></a>
-                  <a href="https://mega.nz/file/VYZHVQ7D#AoobqYeShx7AmP_Zxq1lZzhQB6QoSivLu-93KkXeVL8" target="_blank"><button class="in-title-text button-download">direct download</button></a>
-                </div>
+
               </div>
             </div>
 
@@ -332,19 +395,47 @@
               </div>
 
               <div class="project-item-info marginbottom1">
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
-                  <p>Mobile Game for Android (Unity)</p>
+
+                <div id="project-info">
+
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Platform / Description</button>
+                    <p>Mobile Game for Android (Unity)</p>
+                  </div>
+                  <div class="margin0 marginbottom1">
+                    <p>Single player mobile videogame. Developed for educational purposes, this game includes an introduction to health
+                      and safety measures regarding Covid19, represented in diagrams and fairly visual explanations.
+                    <br>After this informative part, the player will be taken to the main menu. The game consists of some levels with
+                      different activities, all regarding Covid's health and care measures: drag and drop masks
+                      to the people that spawns on the level, separate them for the minimum safety distance...
+                    <br>Visuals are entirely made up of pixel art.
+                    </p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Role</button>
+                    <p>Game developer / Artist</p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Additional Links</button>
+                    <a href="https://joanlluismudarra.itch.io/niot-now-is-our-time" target="_blank"><button class="in-title-text button-link">itch.io</button></a>
+                    <a href="https://mega.nz/file/QIAhnK5b#VYp7Dspe2OPkHda2VDqUoiD7Fo9v0SBbGc-_hbqsuvU" target="_blank"><button class="in-title-text button-download">direct download</button></a>
+                  </div>
                 </div>
-                <div class="margin0 marginbottom1">
-                  <p>Single player</p>
+
+                <div id="div-project4-images" class="project-images d-flex flex-column">
+                  <div id="div-project4-img-list">
+                    <img id="img-project4-1" src="img/proj04/proj04-img02.png" class="project4-img project-img-list project-image-list-active"/>
+                    <img id="img-project4-2" src="img/proj04/proj04-img03.png" class="project4-img project-img-list"/>
+                    <img id="img-project4-3" src="img/proj04/proj04-img04.png" class="project4-img project-img-list"/>
+                    <img id="img-project4-4" src="img/proj04/proj04-img05.png" class="project4-img project-img-list"/>
+                    <img id="img-project4-5" src="img/proj04/proj04-img06.png" class="project4-img project-img-list"/>
+                    <img id="img-project4-6" src="img/proj04/proj04-img07.png" class="project4-img project-img-list"/>
+                  </div>
+
+                  <div id="div-proj-img-list-controller" class="d-flex flex-row justify-content-center margin1">
+                    <img src="img/img-list-prev.png" class="project-img-list-controller" onclick="swapProjectImage(4,-1)"/>
+                    <img src="img/img-list-full.png" class="project-img-list-controller" onclick="loadFullscreenImage(4)"/>
+                    <img src="img/img-list-next.png" class="project-img-list-controller" onclick="swapProjectImage(4,1)"/>
+                  </div>
                 </div>
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Role</button>
-                  <p>Game developer / Artist</p>
-                </div>
-                <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Additional Links</button>
-                  <a href="https://joanlluismudarra.itch.io/niot-now-is-our-time" target="_blank"><button class="in-title-text button-link">itch.io</button></a>
-                  <a href="https://mega.nz/file/QIAhnK5b#VYp7Dspe2OPkHda2VDqUoiD7Fo9v0SBbGc-_hbqsuvU" target="_blank"><button class="in-title-text button-download">direct download</button></a>
-                </div>
+
               </div>
             </div>
 
@@ -352,6 +443,11 @@
         
           <div id="projects-menu"></div>
         </div>
+
+        <!--<div id="right-side">
+          <div id="project-images" class="d-flex flex-column">
+          </div>
+        </div>-->
       </div>
     </div>
 
@@ -369,6 +465,7 @@
     <!-- More scripts -->
     <script src="js/textareaHelper.js"></script>
     <script src="js/valuesSlideController.js"></script>
+    <script src="js/projectsController.js"></script>
     <script src="js/image3DFX.js"></script>
 </body>
 

@@ -40,14 +40,21 @@ $(document).mousemove(function(event) {
   });
 
   // Profile menu audio
-  $("#returnToWelcomePage").hover(function() {
+  $("#profile-menu-item1").hover(function() {
     audio1.play();
   }, function() {
     audio1.currentTime = 0;
   });
-  $("#goToProjectsPage").hover(function() {
+  $("#profile-menu-item2").hover(function() {
     audio2.play();
   }, function() {
     audio2.currentTime = 0;
+  });
+
+  // Projects menu
+  $("#projects-menu-item1").hover(function() {
+    audio3.play();
+  }, function() {
+    audio3.currentTime = 0;
   });
 });

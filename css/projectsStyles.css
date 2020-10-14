@@ -245,3 +245,40 @@
 .project-image-list-active {
     display: block;
 }
+
+
+.fixed-bottom-menu {
+    position: fixed;
+    width: fit-content;
+    
+    border-bottom: 2px solid white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    bottom: 5%;
+
+}
+/*
+@keyframes shinny-div-fx {
+    0%  {transform: translatey(0%);}
+    25% {transform: translatey(1%);}
+    75% {transform: translatey(-1%);}
+    100%  {transform: translatey(0%);}
+}
+*/
+@keyframes shinny-div-fx {
+    0%, 100% {
+        box-shadow: 0 0 500px 1px rgba(0,200,255,0.3);
+        /*filter: drop-shadow(0px 0px 10px rgb(0,200,255,0)) drop-shadow(0px 0px 10px rgba(0,200,255, 0));*/
+    }
+    50% {
+        box-shadow: 0 0 15px 1px rgb(0,200,255), 0 0 60px 1px rgba(0, 238, 255, 0.4);
+        /*filter: drop-shadow(0px 0px 10px rgb(0,200,255)) drop-shadow(0px 0px 10px rgba(0,200,255, 0.3));*/
+    }
+}
+.shinnyDiv {
+    animation: shinny-div-fx 1.5s ease-in-out infinite;
+    transition: 1s;
+}

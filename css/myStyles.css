@@ -4,6 +4,19 @@
     50% {background-image: linear-gradient( black, rgb(0, 0, 75));}
     100% {background-image: linear-gradient( black, rgb(0, 0, 29));}
 }
+@keyframes shinny-textarea-fx {
+    0%, 100% {
+        box-shadow: 0 0 500px 1px rgba(0,200,255,0.3);
+        /*filter: drop-shadow(0px 0px 10px rgb(0,200,255,0)) drop-shadow(0px 0px 10px rgba(0,200,255, 0));*/
+    }
+    25%, 75% {
+        box-shadow: 0 0 200px 1px rgba(0,200,255, 0.6), 0 0 30px 1px rgba(0, 238, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 15px 1px rgb(0,200,255), 0 0 30px 1px rgba(0, 238, 255, 0.4);
+        /*filter: drop-shadow(0px 0px 10px rgb(0,200,255)) drop-shadow(0px 0px 10px rgba(0,200,255, 0.3));*/
+    }
+}
 
 
 /* STANDARD CSS */
@@ -16,6 +29,10 @@ body {
 	/*animation: bodyBackgroundColor 10s ease infinite;*/
 }
 
+.shinnyTextarea {
+    animation: shinny-textarea-fx 1s ease-in-out infinite;
+    transition: 1s;
+}
 
 /* Main Navbar - - - - - - - - - - - - - - - - - - - - - - - - - */
 #mainNavbar {
@@ -87,6 +104,10 @@ body {
 }
 .div-text *{
     width: 75%;
+}
+.word-textarea-fx {
+    color: rgb(201, 143, 255);
+    font-weight: 600;
 }
 
 #div-main-menu {
@@ -229,6 +250,17 @@ body {
     background-color: rgb(0, 183, 255);
     box-shadow: 0 0 10px rgb(0, 183, 255), 0 0 30px rgb(0, 183, 255), 0 0 60px rgb(0, 183, 255);
 }
+.background-white:hover {
+    background-color: white;
+}
+
+
+/* Projects' portal - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.neon-text {
+    color: white;
+    -webkit-filter: drop-shadow(0 0 5px rgb(0, 200, 255));
+}
 
 .in-title-text {
     padding: 0.25rem 1rem 0.25rem 1rem;
@@ -295,4 +327,20 @@ body {
     text-decoration: underline;
     box-shadow: 0 0 10px rgb(162, 0, 255);
     transition: 0.1s;
+}
+
+h1 {
+    color: rgb(197, 197, 197);
+    margin-bottom: 1rem;
+}
+h1:hover {color: white;}
+h3 {
+    font-weight: 400;
+    color: rgb(66, 160, 248);
+}
+h3:hover {color: rgb(0,200,255);}
+.word-projects-list-fx {
+    /*cursor: pointer;*/
+    color: rgb(139, 147, 255);
+    font-weight: 600;
 }

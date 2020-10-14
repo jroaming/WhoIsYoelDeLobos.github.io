@@ -72,3 +72,12 @@ function writeCaption() {
         setTimeout(typeWriter, speed);
       }
 }
+
+
+var textareaHelper = $('#textAreaHelper')[0];
+function textareaNoticingFX() {
+    textareaHelper.classList.add('shinnyTextarea');
+}
+function textareaNoticingFXOFF() {
+    textareaHelper.classList.remove('shinnyTextarea');
+}

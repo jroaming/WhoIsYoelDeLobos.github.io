@@ -95,7 +95,8 @@
             <p>and this is my webfolio.</p>
           </h5>
           
-          <h5>You can also read some explanations up left, on the <span style="color: rgb(223, 176, 255);">text area</span>. It may be helpful!</h5>
+          <h5>You can also read some explanations up left, on the <span class="word-textarea-fx"
+            onmouseover="textareaNoticingFX()" onmouseleave="textareaNoticingFXOFF()">dialog area</span>. It may be helpful!</h5>
         </div>
         <h2>Here, have a look:</h2>
 
@@ -197,11 +198,11 @@
 
       <div id="div-profile-main-buttons" class="div-welcome-titles d-flex justify-content-around">
         <div class="div-2-buttons-container d-flex flex-row justify-content-center">
-          <button id="main-menu-item1" class="soft-neon-button"
+          <button id="profile-menu-item1" class="soft-neon-button"
               onclick="switchTo('main-cover')"
               onmouseover="captionTextarea('main-cover');"
               onmouseleave="captionTextarea(0)">Home</button>
-            <button id="main-menu-item2" class="soft-neon-button"
+            <button id="profile-menu-item2" class="soft-neon-button"
               onclick="switchTo('projects-page')"
               onmouseover="captionTextarea('main-menu_projects');"
               onmouseleave="captionTextarea(0)">Projects</button>
@@ -229,6 +230,12 @@
         <div id="center-side">
           <div id="projects-info" class="d-flex flex-column">
             
+            <div id="div-intro-projects-portal">
+              <h1>Welcome to the projects' portal!</h1>
+              <h3>Click on one of the <span class="word-projects-list-fx"
+                onmouseover="projectsListNoticingFX()" onmouseleave="projectsListNoticingFXOFF()">list</span>, and its information will be displayed.</h3>
+            </div>
+
             <!-- PROJECT 01: WAY TO GO! -->            
             <div class="d-flex flex-row justify-content-around">
               <div id="project01" class="project-item" style="display: none;">
@@ -470,6 +477,9 @@
                   <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Role</button>
                     <p>Author / Illustrator</p>
                   </div>
+                  <div class="d-flex flex-row align-items-center margin0"><button class="in-title-text" disabled>Length</button>
+                    <p>Total pages of the work: 200 (Author's Complete Collection book)</p>
+                  </div>
                   <div class="d-flex flex-row align-items-center margin0"><button class="alert-title-text" disabled>Info</button>
                     <p>This product is currently only available in Spanish.</p>
                   </div>
@@ -502,10 +512,13 @@
 
         </div>
 
-        <!--<div id="right-side">
-          <div id="project-images" class="d-flex flex-column">
-          </div>
-        </div>-->
+        <div id="bot-side" class="fixed-bottom-menu align-items-center">
+          <h3 class="neon-text margin2">Wanna talk?</h3>
+          <button id="projects-menu-item1" class="soft-neon-button"
+              onclick="switchTo('contact-page')"
+              onmouseover="captionTextarea('main-menu_contact');"
+              onmouseleave="captionTextarea(0)">Contact</button>
+        </div>
       </div>
     </div>
 

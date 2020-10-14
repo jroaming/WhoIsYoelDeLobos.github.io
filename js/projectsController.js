@@ -10,6 +10,9 @@ var projectImagesList = [
 ];
 
 function swapToProject(togo) {
+    // we hide the intro/help titles of the page:
+    $('#div-intro-projects-portal')[0].style.display = 'none';
+
     iProject = togo;
     iProjectImage = 0;
 
@@ -69,4 +72,15 @@ function loadFullscreenImage(nProject) {
     var myWindow = window.open(imgToOpen.src, "fullscreen_image", "_blank", "toolbar=no,scrollbars=no,resizable=yes");
 
     return myWindow;
+}
+
+
+var projectsList = $('#left-side')[0];
+
+function projectsListNoticingFX() {
+    projectsList.classList.add('shinnyDiv');
+}
+
+function projectsListNoticingFXOFF() {
+    projectsList.classList.remove('shinnyDiv');
 }

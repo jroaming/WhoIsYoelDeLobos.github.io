@@ -8,6 +8,8 @@ function switchTo(code) {
     $('#contact-page')[0].style.display = 'none';
 
     $('#'+code)[0].style.display = 'block';
+    document.getElementsByClassName('navbar-menu-active')[0].classList.remove('navbar-menu-active');
+    $('#item-'+code)[0].classList.add('navbar-menu-active');
 }
 
 function switchMapAddress() {
@@ -21,3 +23,4 @@ function switchMapAddress() {
     elementHidden.classList.remove('contact-way-hidden');
     elementHidden.classList.add('contact-way-displayed');
 }
+

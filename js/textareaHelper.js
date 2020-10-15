@@ -42,6 +42,26 @@ var helpTextarea = [
     {
         code: "profile-joel-working-img",
         text: "Trust me, that photo was the best one..."
+    },
+    {
+        code: "contact-icon-help-email",
+        text: "This is my email address. Click to send me a mail!"
+    },
+    {
+        code: "contact-icon-help-address",
+        text: "My home address."
+    },
+    {
+        code: "contact-icon-help-phone",
+        text: "Phone number. Better to send a mail, tho."
+    },
+    {
+        code: "contact-icon-help-linkedin",
+        text: "My LinkedIn profile. Click to open!"
+    },
+    {
+        code: "profile-general-info",
+        text: "Basic stuff about me."
     }
 ];
 

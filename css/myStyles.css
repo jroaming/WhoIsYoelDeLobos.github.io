@@ -34,6 +34,13 @@ body {
     transition: 1s;
 }
 
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.cursor-help:hover {
+    cursor: help;
+}
 /* Main Navbar - - - - - - - - - - - - - - - - - - - - - - - - - */
 #mainNavbar {
     background-color: black;
@@ -41,16 +48,40 @@ body {
     height: 3rem;
 }
 #mainNavbar .mainNavbarItem {
-    margin: auto 1.5rem auto 1.5rem;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.mainNavbarItem {
+    transition: .15s;
 }
 .mainNavbarItem a {
     text-decoration: none;
     color: rgb(150,150,150);
 }
-.mainNavbarItem a:hover {
-    color: white;
+.mainNavbarItem:hover {
+    background-color: rgba(200,200,255,0.2);
+    /*border-bottom: 1px dotted rgb(0,200,255);*/
     cursor: pointer;
 }
+.mainNavbarItem:hover a {
+    color: white;
+}
+
+.navbar-menu-active {
+    background: linear-gradient(180deg, rgb(0, 50, 124), rgba(0,100,255,1));
+    border-bottom: 2px solid white;
+}
+.navbar-menu-active:hover {
+    border-bottom: 2px solid white;
+}
+.navbar-menu-active a {
+    color: white;
+}
+
 
 .textAreaHelper {
     padding-left: 1rem;
@@ -420,4 +451,40 @@ h3:hover {color: rgb(0,200,255);}
 .button-address-switch:focus {
     outline: none;
     box-shadow: none;
+}
+
+#contact-icon-email {
+    background-image: url('../img/contact-email.png');
+}
+#contact-icon-email:hover {
+    cursor: pointer;
+    box-shadow: white;
+}
+#contact-icon-address {
+    background-image: url('../img/contact-address.png');
+}
+#contact-icon-phone {
+    background-image: url('../img/contact-phone.png');
+}
+#contact-icon-linkedin {
+    background-image: url('../img/contact-linkedin.png');
+}
+#contact-icon-linkedin:hover {
+    cursor: pointer;
+    box-shadow: white;
+}
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0,0,0,0.1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1rem;
+}
+.contact-icon:hover {
+    background-color: rgb(0, 14, 56);
+    box-shadow: 0 0 15px rgb(0,200,255);
+    cursor: help;
+    transition: .2s;
 }

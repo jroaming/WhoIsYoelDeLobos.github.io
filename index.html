@@ -57,22 +57,22 @@
       </div>
 
       <div class="d-flex flex-row justify-content-end">
-        <p class="p-2 mainNavbarItem">
-          <a class="" onclick="switchTo('main-cover');" onmouseover="captionTextarea('main-menu_home');" onmouseleave="captionTextarea(0)">Home</a>
+        <p id="item-main-cover" class="mainNavbarItem navbar-menu-active" onclick="switchTo('main-cover');" >
+          <a class="" onmouseover="captionTextarea('main-menu_home');" onmouseleave="captionTextarea(0)">Home</a>
         </p>
-        <p class="p-2 mainNavbarItem">
-          <a class=""onclick="switchTo('profile-page');" onmouseover="captionTextarea('main-menu_profile');" onmouseleave="captionTextarea(0)">Profile</a>
+        <p id="item-profile-page" class="mainNavbarItem" onclick="switchTo('profile-page');">
+          <a class="" onmouseover="captionTextarea('main-menu_profile');" onmouseleave="captionTextarea(0)">Profile</a>
         </p>
-        <p class="p-2 mainNavbarItem">
-          <a class="" onclick="switchTo('projects-page');" onmouseover="captionTextarea('main-menu_projects');" onmouseleave="captionTextarea(0)">Projects</a>
+        <p id="item-projects-page" class="mainNavbarItem" onclick="switchTo('projects-page');">
+          <a class="" onmouseover="captionTextarea('main-menu_projects');" onmouseleave="captionTextarea(0)">Projects</a>
         </p>
         <!--
-        <p class="p-2 mainNavbarItem">
-          <a class="" onclick="switchTo('tools-page');" onmouseover="captionTextarea('main-menu_tools');" onmouseleave="captionTextarea(0)">Tools</a>
+        <p id="item-main-cover" class="mainNavbarItem" onclick="switchTo('tools-page');">
+          <a class="" onmouseover="captionTextarea('main-menu_tools');" onmouseleave="captionTextarea(0)">Tools</a>
         </p>
         -->
-        <p class="p-2 mainNavbarItem">
-          <a class="" onclick="switchTo('contact-page');" onmouseover="captionTextarea('main-menu_contact');" onmouseleave="captionTextarea(0)">Contact</a>
+        <p id="item-contact-page" class="mainNavbarItem" onclick="switchTo('contact-page');">
+          <a class="" onmouseover="captionTextarea('main-menu_contact');" onmouseleave="captionTextarea(0)">Contact</a>
         </p>
       </div>
     </div>
@@ -85,8 +85,8 @@
     <!-- ***************************************************************************** MAIN MENU -->
     <div id="main-cover">
       
-      <img src="img/yoel-blued-cover-face.png" id="img-yoel-cover-face" onmouseover="captionTextarea('home-face-img');" onmouseleave="captionTextarea(0)"/>
-      <img src="img/joel-title-white-glow-maxsize.png" id="img-joel-title-cover" onmouseover="captionTextarea('home-name-img');" onmouseleave="captionTextarea(0)"/>
+      <img src="img/yoel-blued-cover-face.png" class="cursor-help" id="img-yoel-cover-face" onmouseover="captionTextarea('home-face-img');" onmouseleave="captionTextarea(0)"/>
+      <img src="img/joel-title-white-glow-maxsize.png" class="cursor-help" id="img-joel-title-cover" onmouseover="captionTextarea('home-name-img');" onmouseleave="captionTextarea(0)"/>
 
       <div class="div-welcome-titles">
         <h2>Make yourself at home!</h2>
@@ -151,10 +151,10 @@
     <!-- ***************************************************************************** MY PROFILE -->
     <div id="profile-page" style="display: none;">
       <div id="div-profile-img-card">
-          <img id="img-yoel-profile-working" src="img/joel-profile-working.png" onmouseover="captionTextarea('profile-joel-working-img');" onmouseleave="captionTextarea(0)"/>
+          <img id="img-yoel-profile-working" class="cursor-help" src="img/joel-profile-working.png" onmouseover="captionTextarea('profile-joel-working-img');" onmouseleave="captionTextarea(0)"/>
       </div>
       
-      <div class="div-welcome-titles">
+      <div class="div-welcome-titles cursor-help" onmouseover="captionTextarea('profile-general-info');" onmouseleave="captionTextarea(0)">
         <h2 class="">Joel López Romero</h2>
 
         <div class="div-text interactive-list-text">
@@ -539,17 +539,19 @@
     <!-- ***************************************************************************** CONTACT -->
     <div id="contact-page" style="display: none;">
       <div id="contact-page-content" class="d-flex flex-column">
-        <h1 id="contact-title-h1" class="margin1 marginbottom3">Wanna talk?</h1>
+        <h1 id="contact-title-h1" class="margin1 marginbottom3">Let's meet up!</h1>
         <div class="d-flex justify-content-around">
           <!-- email -->
           <div class="div-contact-way">
-            <h4 class="nomargin nopadding">Email</h4>
+            <a href="mailto:seldengamer@hotmail.com"><div id="contact-icon-email" class="contact-icon" onmouseover="captionTextarea('contact-icon-help-email');" onmouseleave="captionTextarea(0)"></div></a>
+            <!--<h4 class="nomargin nopadding">Email</h4>-->
             <h4 id="contact-email" class="slender-text"><a href="mailto:seldengamer@hotmail.com">seldengamer@hotmail.com</a></h4>
           </div>
 
           <!-- address -->
           <div class="div-contact-way">
-            <h4 class="nomargin nopadding">Address</h4>
+            <div id="contact-icon-address" class="contact-icon" onmouseover="captionTextarea('contact-icon-help-address');" onmouseleave="captionTextarea(0)"></div>
+            <!--<h4 class="nomargin nopadding">Address</h4>-->
 
             <button id="addressMapSwitch" class="button-switch-address margin1 button-address-switch" onclick="switchMapAddress()">Show map/address</button>
 
@@ -560,14 +562,22 @@
               </h4>
               
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.8956815796855!2d2.0714192156698115!3d41.35462110598817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4995a56c605f3%3A0x2e8902c515ecb2c7!2sCarrer%20de%20Josep%20Cuxart%20i%20Cases%2C%2049%2C%2008940%20Cornell%C3%A0%20de%20Llobregat%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1602727359129!5m2!1ses!2ses"
-              class="margintop1 contact-way-hidden" style="display:none;" width="400px" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              class="margintop1 contact-way-hidden" style="display:none;" width="300px" height="300px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
           </div>
 
           <!-- phone -->
           <div class="div-contact-way">
-            <h4 class="nomargin nopadding">Phone</h4>
+            <div id="contact-icon-phone" class="contact-icon" onmouseover="captionTextarea('contact-icon-help-phone');" onmouseleave="captionTextarea(0)"></div>
+            <!--<h4 class="nomargin nopadding">Phone</h4>-->
             <h4 id="contact-phone" class="slender-text white-text">689 773 545</h4>
+          </div>
+
+          <!-- linkedin -->
+          <div class="div-contact-way">
+            <a href="https://www.linkedin.com/in/joel-l%C3%B3pez-romero-2256b2139/" target="_blank"><div id="contact-icon-linkedin" class="contact-icon" onmouseover="captionTextarea('contact-icon-help-linkedin');" onmouseleave="captionTextarea(0)"></div></a>
+            <!--<h4 class="nomargin nopadding">LinkedIn</h4>-->
+            <a href="https://www.linkedin.com/in/joel-l%C3%B3pez-romero-2256b2139/" target="_blank"><h4 id="contact-linkedin" class="slender-text white-text">Go to profile</h4></a>
           </div>
         </div>
       </div>

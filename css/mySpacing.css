@@ -44,16 +44,16 @@
     margin: 2rem;
 }
 .margin3 {
-    margin: 2rem;
+    margin: 3rem;
 }
 .margintop1 {
     margin-top: 1rem;
 }
 .margintop2 {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 .margintop3 {
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 .marginbottom1 {
     margin-bottom: 1rem;
@@ -63,4 +63,34 @@
 }
 .marginbottom3 {
     margin-bottom: 3rem;
+}
+.marginleft1 {
+    margin-left: 1rem;
+}
+.marginleft2 {
+    margin-left: 2rem;
+}
+.marginleft3 {
+    margin-left: 3rem;
+}
+.marginleft4 {
+    margin-left: 4rem;
+}
+.marginleft5 {
+    margin-left: 5rem;
+}
+.marginright1 {
+    margin-right: 1rem;
+}
+.marginrightç2 {
+    margin-right: 2rem;
+}
+.marginright3 {
+    margin-right: 3rem;
+}
+.marginright4 {
+    margin-right: 4rem;
+}
+.marginright5 {
+    margin-right: 5rem;
 }

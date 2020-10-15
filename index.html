@@ -66,9 +66,11 @@
         <p class="p-2 mainNavbarItem">
           <a class="" onclick="switchTo('projects-page');" onmouseover="captionTextarea('main-menu_projects');" onmouseleave="captionTextarea(0)">Projects</a>
         </p>
+        <!--
         <p class="p-2 mainNavbarItem">
           <a class="" onclick="switchTo('tools-page');" onmouseover="captionTextarea('main-menu_tools');" onmouseleave="captionTextarea(0)">Tools</a>
         </p>
+        -->
         <p class="p-2 mainNavbarItem">
           <a class="" onclick="switchTo('contact-page');" onmouseover="captionTextarea('main-menu_contact');" onmouseleave="captionTextarea(0)">Contact</a>
         </p>
@@ -215,7 +217,7 @@
     <!-- ***************************************************************************** PROJECTS -->
     <div id="projects-page" style="display: none;">
       <div id="projects-page-content" class="d-flex flex-row">
-        <div id="left-side">
+        <div id="left-side" class="shinnyDiv">
           <!-- PROJECTS THUMBNAIL LIST -->
           <div id="projects-list">
             <div id="project-list-item1" class="project-list-item project1-image" onclick="swapToProject(1)"></div>
@@ -231,9 +233,16 @@
           <div id="projects-info" class="d-flex flex-column">
             
             <div id="div-intro-projects-portal">
-              <h1>Welcome to the projects' portal!</h1>
-              <h3>Click on one of the <span class="word-projects-list-fx"
-                onmouseover="projectsListNoticingFX()" onmouseleave="projectsListNoticingFXOFF()">list</span>, and its information will be displayed.</h3>
+                <h1>Welcome to the projects' portal!</h1>
+                <div class="d-flex flex-row margin2">
+                  <img src="img/item-question.png" class="img-icon-projects-intro marginright1"/><h4>Pick one of the <span class="word-projects-list-fx">list</span>, and its information will be displayed.</h4>
+                </div>
+                <div class="d-flex flex-row  margin2">
+                  <img src="img/item-info.png" class="img-icon-projects-intro marginright1"/><h4>There are currently <span class="word-projects-list-fx">5 projects</span> available.</h4>
+                </div>
+                <div class="d-flex flex-row margin2">
+                  <img src="img/item-chat.png" class="img-icon-projects-intro marginright1"/><h4>Always remember: you can <span class="word-projects-list-fx">contact me</span> with the button below. (It's free)</h4>
+                </div>                
             </div>
 
             <!-- PROJECT 01: WAY TO GO! -->            
@@ -529,7 +538,39 @@
 
     <!-- ***************************************************************************** CONTACT -->
     <div id="contact-page" style="display: none;">
+      <div id="contact-page-content" class="d-flex flex-column">
+        <h1 id="contact-title-h1" class="margin1 marginbottom3">Wanna talk?</h1>
+        <div class="d-flex justify-content-around">
+          <!-- email -->
+          <div class="div-contact-way">
+            <h4 class="nomargin nopadding">Email</h4>
+            <h4 id="contact-email" class="slender-text"><a href="mailto:seldengamer@hotmail.com">seldengamer@hotmail.com</a></h4>
+          </div>
 
+          <!-- address -->
+          <div class="div-contact-way">
+            <h4 class="nomargin nopadding">Address</h4>
+
+            <button id="addressMapSwitch" class="button-switch-address margin1 button-address-switch" onclick="switchMapAddress()">Show map/address</button>
+
+            <div id="div-address-content">
+              <h4 id="contact-address" class="slender-text white-text contact-way-displayed" style="text-align: center;font-size: 20px;">c/Josep Cuxart, 49
+                <br>08940 Cornellà de Llobregat
+                <br><span style="font-size: 24px;">Barcelona</span>
+              </h4>
+              
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.8956815796855!2d2.0714192156698115!3d41.35462110598817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4995a56c605f3%3A0x2e8902c515ecb2c7!2sCarrer%20de%20Josep%20Cuxart%20i%20Cases%2C%2049%2C%2008940%20Cornell%C3%A0%20de%20Llobregat%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1602727359129!5m2!1ses!2ses"
+              class="margintop1 contact-way-hidden" style="display:none;" width="400px" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+          </div>
+
+          <!-- phone -->
+          <div class="div-contact-way">
+            <h4 class="nomargin nopadding">Phone</h4>
+            <h4 id="contact-phone" class="slender-text white-text">689 773 545</h4>
+          </div>
+        </div>
+      </div>
     </div>
 
 
@@ -538,6 +579,7 @@
     <script src="js/valuesSlideController.js"></script>
     <script src="js/projectsController.js"></script>
     <script src="js/image3DFX.js"></script>
+    <script src="js/utils.js"></script>
 </body>
 
 </html>

@@ -9,3 +9,15 @@ function switchTo(code) {
 
     $('#'+code)[0].style.display = 'block';
 }
+
+function switchMapAddress() {
+    let elementShown = document.getElementsByClassName('contact-way-displayed')[0];
+    let elementHidden = document.getElementsByClassName('contact-way-hidden')[0];
+    
+    fadeToAndFX(elementShown, elementHidden, "block");
+    
+    elementShown.classList.remove('contact-way-displayed');
+    elementShown.classList.add('contact-way-hidden');
+    elementHidden.classList.remove('contact-way-hidden');
+    elementHidden.classList.add('contact-way-displayed');
+}

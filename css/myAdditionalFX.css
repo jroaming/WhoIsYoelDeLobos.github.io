@@ -3,6 +3,11 @@
     -webkit-transition: opacity 0.15s;
 }
 
+.shown {
+    opacity: 1;
+    -webkit-transition: opacity 0.15s;
+}
+
 .reversed-horizontal {
     transform: scaleX(-1);
 }

@@ -1,6 +1,9 @@
+var projectsList = $('#left-side')[0];
+
 var iProject = 0;
 var iProjectImage = 1;
 var projInfoList = document.getElementsByClassName("project-item");
+
 var projectImagesList = [
     document.getElementsByClassName("project1-img"),
     document.getElementsByClassName("project2-img"),
@@ -9,7 +12,13 @@ var projectImagesList = [
     document.getElementsByClassName("project5-img")
 ];
 
+var boolFirstLoad = true;
+var boolFirstImageLoad = true;
+
+
 function swapToProject(togo) {
+    var previousProject = iProject;
+
     // we hide the intro/help titles of the page:
     $('#div-intro-projects-portal')[0].style.display = 'none';
 
@@ -17,26 +26,41 @@ function swapToProject(togo) {
     iProjectImage = 0;
 
     for (let aux = 0; aux < projInfoList.length; aux++) {
-        projInfoList[aux].style.display = "none";
         $("#project-list-item"+(aux+1))[0].classList.remove("active-project-info");
     }
-    projInfoList[togo-1].style.display = "flex";
+
+    // show div with project info
+    if (boolFirstLoad) {
+        unfadeAndFX(projInfoList[togo-1], "flex");
+        boolFirstLoad = false;
+    } else {
+        fadeToAndFX(projInfoList[previousProject-1], projInfoList[togo-1], "flex");
+    }
+    
+    
     $("#project-list-item"+(togo))[0].classList.add("active-project-info");
     //console.log($("#project-list-item"+(togo))[0].classList);
 
+    if (boolFirstImageLoad) projectsListNoticingFXOFF();
+    boolFirstImageLoad = true;
     swapProjectImage(togo, 1);
+    boolFirstImageLoad = false;
 }
 
 function swapProjectImage(nProject, action) {
     if (iProject != 0 && (action == 1 || action == -1)) {   //checkers
+        oldProjectImage = iProjectImage;
         let maxImageIndex = projectImagesList[nProject-1].length;
 
-        for (let iImage = 0; iImage < maxImageIndex; iImage++) {
 
-            projectImagesList[nProject-1][iImage].style.display = "none";
-            //projectImagesList[nProject][iImage].classList.remove("project-image-list-active");
-
+        if (boolFirstImageLoad) {
+            for (let iImage = 0; iImage < maxImageIndex; iImage++) {
+                if (iImage != iProjectImage-1) projectImagesList[nProject-1][iImage].style.display = "none";
+            }
         }
+
+        //fade(projectImagesList[nProject-1][iProjectImage-1]);
+
         //el primer (y unico) elemento que tenga la clase 'project-image-list-active' será del que haya que borrarlo.
         var activeItems = document.getElementsByClassName("project-image-list-active");
         for (let iImage = 0; iImage < activeItems.length; iImage++)
@@ -52,7 +76,12 @@ function swapProjectImage(nProject, action) {
 
         //console.log(iProjectImage);
         projectImagesList[nProject-1][iProjectImage-1].classList.add("project-image-list-active");
-        projectImagesList[nProject-1][iProjectImage-1].style.display = "block";
+        if (boolFirstImageLoad) unfade(projectImagesList[nProject-1][iProjectImage-1], "block");
+        else {
+            fadeTo(projectImagesList[nProject-1][oldProjectImage-1], projectImagesList[nProject-1][iProjectImage-1], "block");
+            //unfade(projectImagesList[nProject-1][iProjectImage-1], "block");
+        }
+
 
         /*
         let shinnyIconsFullscreen = document.getElementsByClassName("shinny-icon");
@@ -74,8 +103,6 @@ function loadFullscreenImage(nProject) {
     return myWindow;
 }
 
-
-var projectsList = $('#left-side')[0];
 
 function projectsListNoticingFX() {
     projectsList.classList.add('shinnyDiv');

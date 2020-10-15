@@ -331,7 +331,6 @@ body {
 
 h1 {
     color: rgb(197, 197, 197);
-    margin-bottom: 1rem;
 }
 h1:hover {color: white;}
 h3 {
@@ -343,4 +342,82 @@ h3:hover {color: rgb(0,200,255);}
     /*cursor: pointer;*/
     color: rgb(139, 147, 255);
     font-weight: 600;
+}
+
+
+/* Contact page - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.slender-text {
+    font-weight: 300;
+}
+.white-text {
+    color: white;
+}
+
+#contact-page-content {
+    margin: 5% 10% 5% 10%;
+    /*padding: 1rem;*/
+}
+#contact-title-h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    transition: .5s;
+}
+@keyframes shinny-title-animation {
+    50% {
+        filter: drop-shadow(0px 0px 5px rgb(0,200,255)) drop-shadow(0px 0px 10px rgba(0,200,255,0.75));
+    }
+    0%, 100% {
+        filter: drop-shadow(0px 0px 0px rgb(0,200,255));
+    }
+}
+#contact-page-content:hover #contact-title-h1 {
+    /*animation: shinny-title-animation 2.5s ease-in-out infinite;*/
+    filter: drop-shadow(0px 0px 5px rgb(0,200,255)) drop-shadow(0px 0px 10px rgba(0,200,255,0.75));
+    transition-duration: .5s;
+}
+#contact-email a{
+    color: rgb(0,200,255);
+}
+#contact-email:hover a{
+    text-decoration: none;
+    color: rgb(214, 246, 255);
+}
+
+.div-contact-way {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+.contact-way-displayed {
+}
+.contact-way-hidden {
+}
+
+.button-address-switch {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(0,200,255, 1);
+    border: none;
+    border-radius: .75rem;
+    font-size: 20px;
+    padding: .5rem 2.5rem;
+    transition: .25s;
+}
+.button-address-switch:hover {
+    color: black;
+    font-weight: 400;
+    background-color: rgba(0,200,255,1);
+    filter: drop-shadow(0 0 5px rgba(0,200,255,1)) drop-shadow(0px 0px 10px rgba(0,200,255,0.75));
+}
+.button-address-switch:active {
+    color: black;
+    font-weight: 400;
+    background-color: white;
+    filter: drop-shadow(0 0 5px rgba(150,200,255,1)) drop-shadow(0px 0px 10px rgba(150,200,255,0.75));
+}
+.button-address-switch:focus {
+    outline: none;
+    box-shadow: none;
 }

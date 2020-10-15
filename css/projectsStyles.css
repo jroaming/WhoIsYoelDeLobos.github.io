@@ -127,6 +127,18 @@
     width: 100%;
     font-size: 3rem;
 }
+#div-intro-projects-portal h1 {
+    color: white;
+    width: 100%;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+#div-intro-projects-portal h4 {
+    color: rgb(66, 160, 248);
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 .project-item h4 {
     color: rgb(66, 160, 248);
 }
@@ -243,7 +255,7 @@
     object-position: bottom;
 }
 .project-image-list-active {
-    display: block;
+    /*display: block;*/
 }
 
 
@@ -281,4 +293,19 @@
 .shinnyDiv {
     animation: shinny-div-fx 1.5s ease-in-out infinite;
     transition: 1s;
+}
+
+@keyframes shinny-icon {
+    0%, 100% {
+        filter: drop-shadow(0px 0px 10px rgb(0,200,255));
+    }
+    50% {
+        filter: drop-shadow(0px 0px 5px rgba(0,200,255,0.3));
+    }
+}
+.img-icon-projects-intro {
+    width: 3rem;
+    height: auto;
+    animation: shinny-icon 1.5s ease-in-out infinite;
+
 }

@@ -32,6 +32,10 @@ var helpTextarea = [
         text: "Here you can find all ways of contacting me."
     },
     {
+        code: "main-menu_artwork",
+        text: "Concept art, 3D models... Any visuals."
+    },
+    {
         code: "home-face-img",
         text: "Yup! That's (almost) my face!"
     },
@@ -41,7 +45,7 @@ var helpTextarea = [
     },
     {
         code: "profile-joel-working-img",
-        text: "Trust me, that photo was the best one..."
+        text: "Trust me, that photo was the best one."
     },
     {
         code: "contact-icon-help-email",
@@ -62,6 +66,10 @@ var helpTextarea = [
     {
         code: "profile-general-info",
         text: "Basic stuff about me."
+    },
+    {
+        code: "div-project-list",
+        text: "This is the projects list."
     }
 ];
 

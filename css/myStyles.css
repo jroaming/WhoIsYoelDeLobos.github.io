@@ -192,9 +192,16 @@ button:focus {
 /* Profile Page - - - - - - - - - - - - - - - - - - - - - - - - - */
 #img-yoel-profile-working {
     right: 65%;
-    top: 13vh;
+    top: 10vh;
+    animation: floating-image 3s ease-in-out infinite;
 }
 
+.img-profile-joel {
+    width: 400px;
+    height: auto;
+}
+#div-profile-joel {
+}
 .interactive-list-text {
     transition-duration: 1s;
     transition-timing-function: ease-in-out;

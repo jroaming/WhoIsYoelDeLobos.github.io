@@ -66,6 +66,9 @@
         <p id="item-projects-page" class="mainNavbarItem" onclick="switchTo('projects-page');">
           <a class="" onmouseover="captionTextarea('main-menu_projects');" onmouseleave="captionTextarea(0)">Projects</a>
         </p>
+        <p id="item-artwork-page" class="mainNavbarItem" onclick="switchTo('artwork-page');">
+          <a class="" onmouseover="captionTextarea('main-menu_artwork');" onmouseleave="captionTextarea(0)">Artwork</a>
+        </p>
         <!--
         <p id="item-main-cover" class="mainNavbarItem" onclick="switchTo('tools-page');">
           <a class="" onmouseover="captionTextarea('main-menu_tools');" onmouseleave="captionTextarea(0)">Tools</a>
@@ -151,7 +154,10 @@
     <!-- ***************************************************************************** MY PROFILE -->
     <div id="profile-page" style="display: none;">
       <div id="div-profile-img-card">
-          <img id="img-yoel-profile-working" class="cursor-help" src="img/joel-profile-working.png" onmouseover="captionTextarea('profile-joel-working-img');" onmouseleave="captionTextarea(0)"/>
+        <div id="div-profile-joel">  
+          <img id="img-yoel-profile-working" class="img-profile-joel cursor-help" src="img/joel-profile-img.png"
+          onmouseover="captionTextarea('profile-joel-working-img');" onmouseleave="captionTextarea(0)"/>
+        </div>
       </div>
       
       <div class="div-welcome-titles cursor-help" onmouseover="captionTextarea('profile-general-info');" onmouseleave="captionTextarea(0)">
@@ -217,7 +223,8 @@
     <!-- ***************************************************************************** PROJECTS -->
     <div id="projects-page" style="display: none;">
       <div id="projects-page-content" class="d-flex flex-row">
-        <div id="left-side" class="shinnyDiv">
+        <div id="left-side" class="shinnyDiv"
+        onmouseover="captionTextarea('div-project-list');" onmouseleave="captionTextarea(0)">
           <!-- PROJECTS THUMBNAIL LIST -->
           <div id="projects-list">
             <div id="project-list-item1" class="project-list-item project1-image" onclick="swapToProject(1)"></div>
@@ -528,6 +535,14 @@
               onmouseover="captionTextarea('main-menu_contact');"
               onmouseleave="captionTextarea(0)">Contact</button>
         </div>
+      </div>
+    </div>
+
+    <!-- ***************************************************************************** ARTWORK -->
+    <div id="artwork-page" style="display: none;">
+      <div class="d-flex flex-column align-items-center justify-content-center" style="height: 30rem;">
+        <h3 style="color: red;">This content isn't available at the moment.</h3>
+        <h5 style="font-weight: 400;color: rgba(200,0,0);">I'll try to fix it ASAP :(</h5>
       </div>
     </div>
 

@@ -4,6 +4,7 @@ function switchTo(code) {
     $('#main-cover')[0].style.display = 'none';
     $('#profile-page')[0].style.display = 'none';
     $('#projects-page')[0].style.display = 'none';
+    $('#artwork-page')[0].style.display = 'none';
     $('#tools-page')[0].style.display = 'none';
     $('#contact-page')[0].style.display = 'none';
 
